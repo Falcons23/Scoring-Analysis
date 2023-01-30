@@ -1,0 +1,14 @@
+w_c = [];
+d = [];
+f_s = [];
+cnt = 1;
+for i = 1:0.5:8
+    for j = 2:0.125:4
+        b_p = 5*((1/(i.*sqrt(2*pi)))*exp(-(j.^2)/(2*i.^2)));
+        f_s(cnt) = i+8*(2+b_p);
+        w_c(cnt) = i;
+        d(cnt) = j;
+        cnt = cnt + 1;
+    end
+end
+scatter3(d,w_c,f_s,"filled");
